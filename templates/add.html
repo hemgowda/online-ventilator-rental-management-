@@ -1,0 +1,60 @@
+<!doctype html> 
+<html> 
+    <style>
+        h2{
+            color:black;
+            text-align:center;
+        }
+        .table td{
+            color:black;
+            font-size: 30px;
+            padding: 10px;
+         }
+         .table #input{
+             height:30px;
+         }
+         button{
+             width:30%;
+             font-size:20px;
+             font-weight:bold;
+             height:50px;
+             border:none;
+             background-color: black;
+             cursor: pointer;
+             border-radius: 10px;
+             color:white
+         
+         }
+         button:hover{
+             background-color: chartreuse;
+             color:black;
+             transition: 0.8s;
+         }
+        </style>
+    <body style="background-color:skyblue;">
+        <h2 style = "text align: center;">Registration Form</h2> 
+ <form action = "http://localhost:5000/add" method = "POST" > 
+ 
+  <center>
+ <fieldset style="width:50%;"> 
+ <div style = "font-size:18px;" fontweight:bold; margin-left:150px;> 
+    <table class="table"  align="center">
+<tr><td>{{ form.name.label }}    </td><td id="input" type="input">   {{ form.name }} </td></tr>
+
+ <tr><td>{{ form.capacity.label }}     </td><td id="input" >    {{ form.capacity}} </td></tr>
+
+ <tr><td>{{ form.price.label }}    </td><td id="input" >    {{ form.price}} </td></tr>
+
+ <tr><td>{{ form.make.label }}     </td><td id="input">     {{ form.make }}</td></tr> 
+<tr><td>{{ form.mfdate.label}}   </td><td id="input">     {{ form.mfdate}} </td></tr>
+</table> <br><br> 
+<div align="center"><button type="submit">Submit</button></div>
+ <!--<center><button>{{ form.submit }} </button></center>-->
+
+ </div> 
+ 
+ </fieldset> 
+</center>
+ </form> 
+ </body> 
+</html>
